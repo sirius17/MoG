@@ -9,8 +9,8 @@ namespace MoG.Tests
         public void Number_system_should_allow_setting_aliases_for_digits()
         {
             var numberSystem = new GalacticNumberSystem();
-            numberSystem.SetAlias("I", "glob");
-            numberSystem.GetAlias("glob").Should().Be("I");
+            numberSystem.SetAlias(RomanDigit.I, "glob");
+            numberSystem.GetAlias("glob").Should().Be(RomanDigit.I);
         }
 
     }
