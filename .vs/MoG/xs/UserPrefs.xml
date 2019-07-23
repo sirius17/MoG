@@ -1,19 +1,20 @@
 ﻿<Properties StartupConfiguration="{314E2440-66C7-4D23-AE46-339AA89716D5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MoG/Merchant.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MoG/Language.cs">
     <Files>
-      <File FileName="MoG/Merchant.cs" Line="11" Column="65" />
-      <File FileName="MoG.Tests/MerchantFixture.cs" Line="9" Column="15" />
+      <File FileName="MoG/Merchant.cs" Line="28" Column="27" />
+      <File FileName="MoG.Tests/MerchantFixture.cs" Line="21" Column="32" />
       <File FileName="MoG.Tests/NumberSystemFixture.cs" Line="43" Column="35" />
       <File FileName="MoG/GalacticNumberSystem.cs" Line="11" Column="1" />
       <File FileName="MoG/PriceList.cs" Line="1" Column="1" />
       <File FileName="MoG/Item.cs" Line="1" Column="1" />
+      <File FileName="MoG/Language.cs" Line="24" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MoG" expanded="True">
             <Node name="MoG" expanded="True">
-              <Node name="Merchant.cs" selected="True" />
+              <Node name="Language.cs" selected="True" />
             </Node>
             <Node name="MoG.Tests" expanded="True" />
           </Node>
@@ -26,7 +27,9 @@
               <Node name="MoG" expanded="True">
                 <Node name="Tests" expanded="True">
                   <Node name="ItemFixture" expanded="True" />
-                  <Node name="MerchantFixture" expanded="True" selected="True" />
+                  <Node name="MerchantFixture" expanded="True">
+                    <Node name="Merchants_can_respond_to_number_conversion_test" selected="True" />
+                  </Node>
                   <Node name="NumberSystemFixture" expanded="True" />
                   <Node name="PriceListFixture" expanded="True" />
                 </Node>

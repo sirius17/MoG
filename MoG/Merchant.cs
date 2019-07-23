@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MoG
+﻿namespace MoG
 {
     public class Merchant
     {
@@ -12,57 +10,42 @@ namespace MoG
 
         public void Tell(string text)
         {
-            Language.TryParseNumberAliasStatement(text, out NumberAliasStatement stmt);
-            NumberSystem.SetAlias(stmt.Digit, stmt.Alias);
+            if (Language.TryParseNumberAliasStatement(text, out NumberAliasStatement stmt) == true)
+            {
+                NumberSystem.SetAlias(stmt.Digit, stmt.Alias);
+            }
+            else if( Language.TryParseItemPriceStatement(text, out ItemPriceStatement stmt2) == true)
+            {
+                var quantityInDecimal = NumberSystem.GetDecimalValue(stmt2.QuantityInGalaticLanguage);
+                var unitPrice = stmt2.ValueInCredits / quantityInDecimal;
+                Prices.AddItem(new Item(stmt2.ItemName, unitPrice));
+            }
         }
 
-
-    }
-
-    public class Language
-    {
-        public bool TryParseNumberAliasStatement(string text, out NumberAliasStatement stmt)
+        public IMerchantReply Ask(string text)
         {
-            // text must be of the form "pish is 1".
-            // Should have 3 words.
-            // Middle should be is
-            // Last should be a valid roman digit.
-            stmt = null;
-            var tokens = text.Split(' ');
-            if (tokens.Length != 3)
-                return false;
-            if (Enum.TryParse<RomanDigit>(tokens[2], out RomanDigit digit) == false)
-                return false;
-            if (tokens[1] != "is")
-                return false;
-
-            stmt = new NumberAliasStatement(digit, tokens[0]);
-            return true;
+            Language.TryParseNumberConversionQuestion(text, out NumberConversionQuestion question);
+            var decimalValue = this.NumberSystem.GetDecimalValue(question.GalacticNumber);
+            return new NumericConversionReply(question.GalacticNumber, decimalValue);
         }
     }
 
-    public interface ISentence
-    {
-    }
 
-    public interface IStatement : ISentence 
-    { 
-    }
-
-    public interface IQuestion : ISentence
+    public class ItemPriceStatement : IStatement
     {
-    }
-
-    public class NumberAliasStatement : IStatement
-    {
-        public NumberAliasStatement(RomanDigit digit, string alias)
+        public ItemPriceStatement(string quantity, string itemName, int valueInCredits)
         {
-            Digit = digit;
-            Alias = alias;
+            QuantityInGalaticLanguage = quantity;
+            ItemName = itemName;
+            ValueInCredits = valueInCredits;
         }
 
-        public RomanDigit Digit { get; }
+        public string QuantityInGalaticLanguage { get; }
 
-        public string Alias { get; }
+        public string ItemName { get; }
+
+        public int ValueInCredits { get; }
     }
+
+
 }
