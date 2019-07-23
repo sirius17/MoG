@@ -1,18 +1,19 @@
 ﻿<Properties StartupConfiguration="{314E2440-66C7-4D23-AE46-339AA89716D5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MoG/GalacticNumberSystem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MoG/Merchant.cs">
     <Files>
-      <File FileName="MoG/Merchant.cs" Line="11" Column="1" />
-      <File FileName="MoG.Tests/MerchantFixture.cs" Line="9" Column="1" />
-      <File FileName="MoG.Tests/NumberSystemFixture.cs" Line="9" Column="29" />
-      <File FileName="MoG/GalacticNumberSystem.cs" Line="9" Column="24" />
+      <File FileName="MoG/Merchant.cs" Line="11" Column="65" />
+      <File FileName="MoG.Tests/MerchantFixture.cs" Line="9" Column="15" />
+      <File FileName="MoG.Tests/NumberSystemFixture.cs" Line="43" Column="35" />
+      <File FileName="MoG/GalacticNumberSystem.cs" Line="11" Column="1" />
       <File FileName="MoG/PriceList.cs" Line="1" Column="1" />
+      <File FileName="MoG/Item.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MoG" expanded="True">
             <Node name="MoG" expanded="True">
-              <Node name="GalacticNumberSystem.cs" selected="True" />
+              <Node name="Merchant.cs" selected="True" />
             </Node>
             <Node name="MoG.Tests" expanded="True" />
           </Node>
@@ -25,7 +26,8 @@
               <Node name="MoG" expanded="True">
                 <Node name="Tests" expanded="True">
                   <Node name="ItemFixture" expanded="True" />
-                  <Node name="NumberSystemFixture" expanded="True" selected="True" />
+                  <Node name="MerchantFixture" expanded="True" selected="True" />
+                  <Node name="NumberSystemFixture" expanded="True" />
                   <Node name="PriceListFixture" expanded="True" />
                 </Node>
               </Node>
