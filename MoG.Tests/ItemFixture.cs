@@ -7,18 +7,10 @@ namespace MoG.Tests
     public class ItemFixture
     {
         [Fact]
-        public void Every_item_has_a_name_test()
+        public void Every_item_must_have_a_name_and_price()
         {
-            var item = new Item();
-            item.Name = "Gold";
-            item.Name.Should().Be("Gold");
-        }
-
-        [Fact]
-        public void Every_item_has_a_price_test()
-        {
-            var item = new Item();
-            item.Price = 10m;
+            var item = new Item("gold", 10m);
+            item.Name.Should().Be("gold");
             item.Price.Should().Be(10m);
         }
     }
