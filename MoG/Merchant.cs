@@ -10,42 +10,21 @@
 
         public void Tell(string text)
         {
-            if (Language.TryParseNumberAliasStatement(text, out NumberAliasStatement stmt) == true)
-            {
-                NumberSystem.SetAlias(stmt.Digit, stmt.Alias);
-            }
-            else if( Language.TryParseItemPriceStatement(text, out ItemPriceStatement stmt2) == true)
-            {
-                var quantityInDecimal = NumberSystem.GetDecimalValue(stmt2.QuantityInGalaticLanguage);
-                var unitPrice = stmt2.ValueInCredits / quantityInDecimal;
-                Prices.AddItem(new Item(stmt2.ItemName, unitPrice));
-            }
+            if (Language.TryParse(text, out ISentence sentence) == false)
+                return;
+            if (sentence is IStatement stmt)
+                stmt.Train(this);
+            // Ignore if this is not a valid statement.
+            
         }
 
         public IMerchantReply Ask(string text)
         {
-            Language.TryParseNumberConversionQuestion(text, out NumberConversionQuestion question);
-            var decimalValue = this.NumberSystem.GetDecimalValue(question.GalacticNumber);
-            return new NumericConversionReply(question.GalacticNumber, decimalValue);
+            Language.TryParse(text, out ISentence sentence);
+            if (sentence is IQuestion question)
+                return question.Answer(this);
+            else 
+                return new NoIdeaReply();
         }
     }
-
-
-    public class ItemPriceStatement : IStatement
-    {
-        public ItemPriceStatement(string quantity, string itemName, int valueInCredits)
-        {
-            QuantityInGalaticLanguage = quantity;
-            ItemName = itemName;
-            ValueInCredits = valueInCredits;
-        }
-
-        public string QuantityInGalaticLanguage { get; }
-
-        public string ItemName { get; }
-
-        public int ValueInCredits { get; }
-    }
-
-
 }

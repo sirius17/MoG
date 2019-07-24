@@ -11,7 +11,7 @@ namespace MoG
             _items[item.Name] = item;
         }
 
-        public object GetUnitPrice(string itemName)
+        public float GetUnitPrice(string itemName)
         {
             return _items[itemName].Price;
         }

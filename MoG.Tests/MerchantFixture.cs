@@ -19,7 +19,7 @@ namespace MoG.Tests
         {
             Merchant merchant = new Merchant();
             merchant.Tell("pish is I");
-            merchant.Tell("pish pish Silver is 34 credits");
+            merchant.Tell("pish pish Silver is 34 Credits");
             merchant.Prices.GetUnitPrice("Silver").Should().Be(17);
 
         }
@@ -33,6 +33,16 @@ namespace MoG.Tests
             merchant.Tell("glob is V");
             var reply = merchant.Ask("how much is pish glob ?");
             reply.Text.Should().Be("pish glob is 4.");
+        }
+
+        [Fact]
+        public static void Merchants_can_respond_to_price_quote_questions_test()
+        {
+            Merchant merchant = new Merchant();
+            merchant.Tell("pish is I");
+            merchant.Tell("pish pish Silver is 20 Credits");
+            var reply = merchant.Ask("how many Credits is pish pish pish Silver ?");
+            reply.Text.Should().Be("pish pish pish Silver is 30 Credits");
         }
     }
 }

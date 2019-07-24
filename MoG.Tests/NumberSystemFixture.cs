@@ -24,7 +24,7 @@ namespace MoG.Tests
         [InlineData("I I I", 3)]
         [InlineData("I V", 4)]
         [InlineData("V I", 6)]
-        public void Number_system_should_be_able_to_convert_galactic_numbers_to_decimal_test(string number, decimal expected)
+        public void Number_system_should_be_able_to_convert_galactic_numbers_to_decimal_test(string number, int expected)
         {
             var numberSystem = new GalacticNumberSystem();
             numberSystem.SetAlias(RomanDigit.I, "I");
@@ -41,7 +41,7 @@ namespace MoG.Tests
         [InlineData("pish pish", 2)]
         [InlineData("pish glob", 4)]
         [InlineData("pish tegj", 9)]
-        public void Alternate_number_system_should_be_able_to_convert_galactic_numbers_to_decimal_test(string number, decimal expected)
+        public void Alternate_number_system_should_be_able_to_convert_galactic_numbers_to_decimal_test(string number, int expected)
         {
             var numberSystem = new GalacticNumberSystem();
             numberSystem.SetAlias(RomanDigit.I, "pish");

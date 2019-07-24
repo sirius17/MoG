@@ -19,7 +19,7 @@ namespace MoG
             return _aliases[alias];
         }
 
-        public decimal GetDecimalValue(string number)
+        public int GetDecimalValue(string number)
         {
             var digits = number.Split(' ')
                                .Select(GetAlias)
@@ -48,16 +48,5 @@ namespace MoG
             }
             return sum;
         }
-    }
-
-    public enum RomanDigit
-    {
-        I = 1,
-        V = 5,
-        X = 10,
-        L = 50,
-        C = 100,
-        D = 500,
-        M = 1000
     }
 }

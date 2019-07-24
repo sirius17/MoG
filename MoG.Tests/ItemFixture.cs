@@ -9,9 +9,11 @@ namespace MoG.Tests
         [Fact]
         public void Every_item_must_have_a_name_and_price()
         {
-            var item = new Item("gold", 10m);
+            var item = new Item("gold", 10f);
             item.Name.Should().Be("gold");
-            item.Price.Should().Be(10m);
+            item.Price.Should().Be(10f);
         }
     }
+
+
 }

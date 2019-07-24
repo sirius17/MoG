@@ -1,20 +1,40 @@
 ﻿<Properties StartupConfiguration="{314E2440-66C7-4D23-AE46-339AA89716D5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MoG/Language.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MoG/NoIdeaReply.cs">
     <Files>
-      <File FileName="MoG/Merchant.cs" Line="28" Column="27" />
-      <File FileName="MoG.Tests/MerchantFixture.cs" Line="21" Column="32" />
-      <File FileName="MoG.Tests/NumberSystemFixture.cs" Line="43" Column="35" />
-      <File FileName="MoG/GalacticNumberSystem.cs" Line="11" Column="1" />
-      <File FileName="MoG/PriceList.cs" Line="1" Column="1" />
-      <File FileName="MoG/Item.cs" Line="1" Column="1" />
-      <File FileName="MoG/Language.cs" Line="24" Column="10" />
+      <File FileName="MoG/Merchant.cs" Line="27" Column="35" />
+      <File FileName="MoG.Tests/MerchantFixture.cs" Line="43" Column="52" />
+      <File FileName="MoG.Tests/NumberSystemFixture.cs" Line="33" Column="54" />
+      <File FileName="MoG/GalacticNumberSystem.cs" Line="20" Column="10" />
+      <File FileName="MoG/PriceList.cs" Line="14" Column="6" />
+      <File FileName="MoG/Item.cs" Line="11" Column="1" />
+      <File FileName="MoG/Language.cs" Line="43" Column="10" />
+      <File FileName="MoG/Language/NumberAliasStatement.cs" Line="10" Column="1" />
+      <File FileName="MoG/Language/IStatement.cs" Line="3" Column="39" />
+      <File FileName="MoG/Language/IQuestion.cs" Line="5" Column="50" />
+      <File FileName="MoG/Language/NumberConversionQuestion.cs" Line="3" Column="32" />
+      <File FileName="MoG/NoIdeaReply.cs" Line="6" Column="6" />
+      <File FileName="MoG/RomanDigit.cs" Line="1" Column="1" />
+      <File FileName="MoG/Language/ItemPriceStatement.cs" Line="26" Column="1" />
+      <File FileName="MoG/Grammer/NumberConversionQuestionGrammer.cs" Line="24" Column="6" />
+      <File FileName="MoG/Grammer/ItemPriceQuoteQuestionGrammer.cs" Line="23" Column="43" />
+      <File FileName="MoG/IntergalacticScript.cs" Line="16" Column="46" />
+      <File FileName="MoG.Tests/ItemFixture.cs" Line="15" Column="10" />
+      <File FileName="MoG.Tests/MogFixture.cs" Line="41" Column="49" />
+      <File FileName="MoG/Language/ItemPriceQuoteQuestion.cs" Line="19" Column="67" />
+      <File FileName="MoG/Grammer/ItemPriceStatementGrammer.cs" Line="10" Column="72" />
+      <File FileName="MoG/Grammer/IGrammer.cs" Line="1" Column="1" />
+      <File FileName="MoG/Language/ItemPriceReply.cs" Line="10" Column="10" />
+      <File FileName="MoG.Tests/PriceListFixture.cs" Line="9" Column="63" />
+      <File FileName="MoG/Language/ISentence.cs" Line="3" Column="22" />
+      <File FileName="MoG/Language/IMerchantReply.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MoG" expanded="True">
             <Node name="MoG" expanded="True">
-              <Node name="Language.cs" selected="True" />
+              <Node name="Language" expanded="True" />
+              <Node name="NoIdeaReply.cs" selected="True" />
             </Node>
             <Node name="MoG.Tests" expanded="True" />
           </Node>
@@ -28,8 +48,9 @@
                 <Node name="Tests" expanded="True">
                   <Node name="ItemFixture" expanded="True" />
                   <Node name="MerchantFixture" expanded="True">
-                    <Node name="Merchants_can_respond_to_number_conversion_test" selected="True" />
+                    <Node name="Merchants_can_respond_to_price_quote_questions_test" selected="True" />
                   </Node>
+                  <Node name="MogFixture" expanded="True" />
                   <Node name="NumberSystemFixture" expanded="True" />
                   <Node name="PriceListFixture" expanded="True" />
                 </Node>
@@ -40,11 +61,16 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../MoG.Tests/MogFixture.cs" line="48" offsetX="896" offsetY="1034" expression="responses" liveUpdate="False" />
+    <Watch file="../../../MoG.Tests/MogFixture.cs" line="48" offsetX="578" offsetY="1191" expression="expectedResponses" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.MoG.Tests PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/Nikhil/Projects/MoG/MoG.Tests/MogFixture.cs" relfile="MoG.Tests/MogFixture.cs" line="47" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

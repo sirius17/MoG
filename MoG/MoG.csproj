@@ -7,4 +7,8 @@
   <ItemGroup>
     <Compile Remove="Class1.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Language\" />
+    <Folder Include="Grammer\" />
+  </ItemGroup>
 </Project>
